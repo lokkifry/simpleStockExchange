@@ -43,20 +43,20 @@ public class StockExchange {
 			reader = Files.newBufferedReader(path);
 			while ((line = reader.readLine()) != null) {
 				
-		    	String [] clientParams = line.split("\t");
-		        
-		        HashMap<String, Integer> stocks = new HashMap<String, Integer>();
-		        stocks.put("A", Integer.parseInt(clientParams[2]));
-		        stocks.put("B", Integer.parseInt(clientParams[3]));
-		        stocks.put("C", Integer.parseInt(clientParams[4]));
-		        stocks.put("D", Integer.parseInt(clientParams[5]));
-		        
-		        Client client = new Client(clientParams[0], new BigDecimal(clientParams[1]), stocks);
-		        
-		        this.clients.put(clientParams[0], client);
-		        
+				String [] clientParams = line.split("\t");
+		
+				HashMap<String, Integer> stocks = new HashMap<String, Integer>();
+				stocks.put("A", Integer.parseInt(clientParams[2]));
+				stocks.put("B", Integer.parseInt(clientParams[3]));
+				stocks.put("C", Integer.parseInt(clientParams[4]));
+				stocks.put("D", Integer.parseInt(clientParams[5]));
+				
+				Client client = new Client(clientParams[0], new BigDecimal(clientParams[1]), stocks);
+				
+				this.clients.put(clientParams[0], client);
+				
 			}
-		    reader.close();
+			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -92,7 +92,7 @@ public class StockExchange {
 					
 				}
 			}
-		    reader.close();
+			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -121,7 +121,7 @@ public class StockExchange {
 			e.printStackTrace();
 		}
 
-	      
+
 	}
 	
 	public HashMap<String, Client> getClients () {

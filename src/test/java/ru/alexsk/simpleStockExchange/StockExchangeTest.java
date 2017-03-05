@@ -22,31 +22,31 @@ public class StockExchangeTest {
 	static HashMap<String, Client> clients;
 	
 	@BeforeClass
-    public static void init() { 
-    	instance = new StockExchange();
-    }
+	public static void init() { 
+		instance = new StockExchange();
+	}
 	
 	@Test
-    public void initClientsMapTest () {
+	public void initClientsMapTest () {
 		instance.initClientsMap(StockExchangeTest.clientsFile);
 		clients = instance.getClients();
-		assertEquals("Sell stocks test", clients.get("C1").getAccount(), new BigDecimal("1000"));
-		assertEquals("Sell stocks test", clients.get("C2").getAccount(), new BigDecimal("2000"));
-    }
-    
+		assertEquals("Check assount sum:", clients.get("C1").getAccount(), new BigDecimal("1000"));
+		assertEquals("Check assount sum:", clients.get("C2").getAccount(), new BigDecimal("2000"));
+	}
+	
 	@Test
-    public void processOrdersTest () {
+	public void processOrdersTest () {
 		instance.processOrders(StockExchangeTest.transactionsFile);
-		assertEquals("Sell stocks test", clients.get("C1").getAccount(), new BigDecimal("980"));
-		assertEquals("Sell stocks test", clients.get("C2").getAccount(), new BigDecimal("2100"));
-    }
+		assertEquals("Check assount sum:", clients.get("C1").getAccount(), new BigDecimal("980"));
+		assertEquals("Check assount sum:", clients.get("C2").getAccount(), new BigDecimal("2100"));
+	}
 	
 	
 	
 	@AfterClass 
 	public static void packResultsTest () {
 		instance.packResults (StockExchangeTest.resultsFile);
-    }
+	}
 
 
 }
