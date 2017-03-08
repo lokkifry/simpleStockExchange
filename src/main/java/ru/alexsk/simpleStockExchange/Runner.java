@@ -6,7 +6,7 @@ public class Runner {
 		
 		StockExchange stockExchange = new StockExchange();
 		int ordersCount = stockExchange.process();
-		System.out.printf("Processed : %d orders", ordersCount);
+		System.out.printf("Processed : %d orders\n", ordersCount);
 		stockExchange.writeResults();
 
 	}
