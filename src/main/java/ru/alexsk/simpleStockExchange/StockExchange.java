@@ -33,8 +33,8 @@ public class StockExchange {
 			try {
 				
 				Order order = orders.next();
-				this.processOrder(order);
-				this.orders.remove();
+				if (this.processOrder(order)) this.orders.remove();
+				else System.out.println("order prossesed error");
 				counter++;	
 				
 			} finally {
@@ -48,15 +48,19 @@ public class StockExchange {
 	
 	private boolean processOrder (Order order) {
 
+		boolean result = false;
+		
 		if (order.operation == 'b') {
 			order.client.buyStocks( order.stockName, order.stockQuantity,order.stockPrice);
-
+			result = true;
 		}
 		if (order.operation == 's') {
 			order.client.sellStocks( order.stockName, order.stockQuantity,order.stockPrice);
+			result = true;
 		}
 		
-		return true;
+		
+		return result;
 	}
 	
 	public void writeResults () {

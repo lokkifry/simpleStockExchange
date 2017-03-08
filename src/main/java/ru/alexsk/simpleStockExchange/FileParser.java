@@ -50,7 +50,11 @@ public class FileParser implements Parser{
 			}
 			reader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("File client.txt searach/open problems");
+			System.exit(0);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Illigal client.txt file format");
+			System.exit(0);
 		}
 		return clients.values().iterator();
 	}
@@ -81,7 +85,11 @@ public class FileParser implements Parser{
 			}
 			reader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("File order.txt searach/open problems");
+			System.exit(0);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Illigal order.txt file format");
+			System.exit(0);
 		}
 		
 
@@ -108,7 +116,8 @@ public class FileParser implements Parser{
 			pw.close();
 			
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Can't write result.txt file");
+			System.exit(0);
 		}
 		
 		return false;
