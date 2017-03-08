@@ -25,7 +25,6 @@ public class FileParser implements Parser{
 	private  HashMap<String, Client> clients = new HashMap<String, Client>();
 	private  ArrayList<Order> orders = new ArrayList<Order>();
 	
-	
 	public Iterator<Client> readClients() {
 		
 		Path path = Paths.get(clientsFile);
