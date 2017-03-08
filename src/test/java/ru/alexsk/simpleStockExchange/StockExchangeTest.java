@@ -1,10 +1,5 @@
 package ru.alexsk.simpleStockExchange;
 
-import static org.junit.Assert.*;
-
-import java.math.BigDecimal;
-import java.util.HashMap;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;

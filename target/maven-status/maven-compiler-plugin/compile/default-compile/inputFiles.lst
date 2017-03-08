@@ -1,2 +1,6 @@
 /home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/Client.java
+/home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/Parser.java
+/home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/Order.java
 /home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/StockExchange.java
+/home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/FileParser.java
+/home/alexsk/workspace/simpleStockExchange/src/main/java/ru/alexsk/simpleStockExchange/Runner.java

@@ -1,2 +1,6 @@
 ru/alexsk/simpleStockExchange/Client.class
+ru/alexsk/simpleStockExchange/Runner.class
 ru/alexsk/simpleStockExchange/StockExchange.class
+ru/alexsk/simpleStockExchange/Parser.class
+ru/alexsk/simpleStockExchange/FileParser.class
+ru/alexsk/simpleStockExchange/Order.class

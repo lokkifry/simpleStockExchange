@@ -1,6 +1,6 @@
 package ru.alexsk.simpleStockExchange;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -32,5 +32,5 @@ public class ClientTest {
 		this.client.buyStocks("B", 5, new BigDecimal("2"));
 		assertEquals("Buy stocks test", client.getAccount(), new BigDecimal("90"));
 	}
-
+	
 }

@@ -4,4 +4,12 @@
   <artifactId>simpleStockExchange</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Simple Stock Exchange</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit-dep</artifactId>
+  		<version>4.8.2</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
 </project>
