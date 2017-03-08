@@ -10,8 +10,6 @@ public class Client {
 	
 	private HashMap<String, Integer> stocks;
 	
-	private Client() {}
-	
 	public Client (String name, BigDecimal account, HashMap<String, Integer> stocks) {
 		this.account = account;
 		this.name = name;
